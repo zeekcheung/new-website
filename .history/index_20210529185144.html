@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="clementCheung">
+    <meta name="description" content="This is a website designed by clement Cheung.">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Clement Cheung</title>
+</head>
+
+<body class="is-loading">
+    <!-- 页面内容的容器 -->
+    <div id="container" class="fade-in">
+        <!-- 简介 -->
+        <div id="intro">
+            <h1>This is <br>
+                Clement</h1>
+
+            <p>没有那么糟糕</p>
+
+            <!-- 箭头 -->
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
+
+        <!-- logo -->
+        <header id="header">
+            <a href="index.html" class="logo">Clement</a>
+        </header>
+
+        <!-- 导航栏 -->
+        <nav>
+            <ul class="links">
+                <li class="active"><a href="index.html">About</a></li>
+                <li><a href="artical.html">Artical</a></li>
+                <li><a href="Album.html">Instagram</a></li>
+                <li><a href="Game.html">Game</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon fa-github"></a></li>
+                <li><a href="#" class="icon fa-twitter"></a></li>
+                <li><a href="#" class="icon fa-facebook"></a></li>
+            </ul>
+        </nav>
+
+        <!-- 主要内容 -->
+        <main>
+            <!-- 精选 -->
+            <article class="post featured">
+                <header class="major">
+                    <span class="date">May 29, 2021</span>
+                    <h2><a href="#">This is <br />
+                            Clement Cheung</a></h2>
+                    <p>A common people. <br>
+                        A common coder. <br>
+                        Like music. <br>
+                        Like movie.</p>
+                </header>
+                <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+            </article>
+        </main>
+
+        <!-- 页脚 -->
+        <footer>
+            <!-- 发送邮件 -->
+            <section>
+                <form action="php/sendEmail.php" method="POST">
+                    <div class="field">
+                        <label for="name">NAME</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="field">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="field">
+                        <label for="message">MESSAGE</label>
+                        <input type="text" name="message" id="message">
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="SEND EMAIL"></li>
+                    </ul>
+                </form>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="split contact">
+                <section class="alt">
+                    <h3>ADDRESS</h3>
+                    <p>广东省</p>
+                </section>
+                <section>
+                    <h3>PHONE</h3>
+                    <p>+86 13727819601</p>
+                </section>
+                <section>
+                    <h3>EMAIL</h3>
+                    <p>clementchueng@gmail.com</p>
+                </section>
+                <section>
+                    <h3>MEDIA</h3>
+                    <ul class="icons alt">
+                        <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+    </div>
+</body>
+
+</html>
