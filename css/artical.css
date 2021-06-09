@@ -1,0 +1,121 @@
+@import url(same.css);
+#main>.posts {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -moz-align-items: stretch;
+    -webkit-align-items: stretch;
+    -ms-align-items: stretch;
+    align-items: stretch;
+    text-align: center;
+    width: 100%;
+    padding: 0
+}
+
+#main>.posts>* {
+    -moz-flex-shrink: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-shrink: 1;
+    flex-shrink: 1;
+    -moz-flex-grow: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-grow: 0;
+    flex-grow: 0
+}
+
+#main>.posts>* {
+    width: 50%
+}
+
+#main>.posts>* {
+    padding: 4rem;
+    width: 50%
+}
+
+#main>.posts>article {
+    border-color: #eee;
+    border-left-width: 2px;
+    border-style: solid;
+    border-top-width: 2px;
+    text-align: center
+}
+
+#main>.posts>article>:last-child {
+    margin-bottom: 0
+}
+
+#main>.posts>article:nth-child(2n-1) {
+    border-left-width: 0
+}
+
+#main>.posts>article:nth-child(-n+2) {
+    border-top-width: 0
+}
+
+@media screen and (max-width:980px) {
+    #main>.posts>* {
+        width: 50%
+    }
+    #main>.posts>* {
+        padding: 2.5rem;
+        width: 50%
+    }
+}
+
+@media screen and (max-width:736px) {
+    #main>.posts>* {
+        width: 100%
+    }
+    #main>.posts>* {
+        padding: 2rem;
+        width: 100%
+    }
+    #main>.posts>article:nth-child(2n-1) {
+        border-left-width: 2px
+    }
+    #main>.posts>article:nth-child(-n+2) {
+        border-top-width: 2px
+    }
+    #main>.posts>article:nth-child(n) {
+        border-left-width: 0
+    }
+    #main>.posts>article:nth-child(-n+1) {
+        border-top-width: 0
+    }
+    #main>.posts>article .image {
+        max-width: 25rem;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+#footer .pagination a, #footer .pagination span {
+    border-color: #e2e2e2
+}
+
+#footer .pagination a {
+    color: #717981!important
+}
+
+#footer .pagination a:hover {
+    color: #18bfef!important;
+    border-color: #18bfef;
+    z-index: 1
+}
+
+#footer .pagination a:hover+a, #footer .pagination a:hover+span {
+    border-left-color: #18bfef
+}
+
+#footer .pagination a.active {
+    background-color: #e2e2e2
+}
+
+#footer .pagination span {
+    color: #e2e2e2
+}

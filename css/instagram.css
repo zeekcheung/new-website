@@ -1,0 +1,55 @@
+@import url(same.min.css);
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.box {
+    cursor: pointer;
+    width: 325px;
+    height: 220px;
+    background: #000;
+    border: solid 2px #8399AF;
+    overflow: hidden;
+    position: relative;
+    margin: 2rem auto;
+}
+
+.box h3 {
+    margin: 10px 10px 0 10px;
+    padding-top: -10px;
+    color: #FFF;
+    font: 18pt Arial, sans-serif;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    max-width: 100%;
+}
+
+.caption {
+    position: absolute;
+    background: #000;
+    height: 100px;
+    width: 100%;
+    opacity: .8;
+    top: 100%;
+    left: 0px;
+    /* For IE 5-7 */
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    /* For IE 8 */
+    -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        margin: 0 10vw;
+    }
+}

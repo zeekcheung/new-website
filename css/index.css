@@ -1,0 +1,280 @@
+@import url(same.css);
+#intro {
+    color: #fff;
+    padding: 8rem 4rem 6rem 4rem;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -moz-justify-content: -moz-flex-end;
+    -webkit-justify-content: -webkit-flex-end;
+    -ms-justify-content: -ms-flex-end;
+    justify-content: flex-end;
+    -moz-transition: opacity 1s ease, -moz-transform 1s ease;
+    -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+    -ms-transition: opacity 1s ease, -ms-transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
+    position: relative;
+    cursor: default;
+    text-align: center;
+    z-index: 1;
+    min-height: 100vh
+}
+
+#intro input, #intro select, #intro textarea {
+    color: #fff
+}
+
+#intro a {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, .5)
+}
+
+#intro a:hover {
+    border-bottom-color: transparent;
+    color: #18bfef!important
+}
+
+#intro b, #intro strong {
+    color: #fff
+}
+
+#intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
+    color: #fff
+}
+
+#intro blockquote {
+    border-left-color: #fff
+}
+
+#intro code {
+    background: rgba(255, 255, 255, .075);
+    border-color: #fff
+}
+
+#intro hr {
+    border-bottom-color: #fff
+}
+
+#intro .button, #intro button, #intro input[type=button], #intro input[type=reset], #intro input[type=submit] {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff!important
+}
+
+#intro .button:hover, #intro button:hover, #intro input[type=button]:hover, #intro input[type=reset]:hover, #intro input[type=submit]:hover {
+    box-shadow: inset 0 0 0 2px #18bfef;
+    color: #18bfef!important
+}
+
+#intro .button.special, #intro button.special, #intro input[type=button].special, #intro input[type=reset].special, #intro input[type=submit].special {
+    background-color: #fff;
+    box-shadow: none;
+    color: #1e252d!important
+}
+
+#intro .button.special:hover, #intro button.special:hover, #intro input[type=button].special:hover, #intro input[type=reset].special:hover, #intro input[type=submit].special:hover {
+    background-color: #18bfef
+}
+
+#intro h1 {
+    font-size: 5rem;
+    line-height: 1
+}
+
+#intro p {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: -.25rem;
+    text-align: center
+}
+
+#intro+#header {
+    margin-top: -20rem
+}
+
+#intro+#header .logo {
+    -moz-transform: translateY(2rem);
+    -webkit-transform: translateY(2rem);
+    -ms-transform: translateY(2rem);
+    transform: translateY(2rem);
+    opacity: 0;
+    visibility: hidden
+}
+
+#intro.hidden {
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    -moz-transform: translateY(2rem);
+    -webkit-transform: translateY(2rem);
+    -ms-transform: translateY(2rem);
+    transform: translateY(2rem);
+    -moz-transition: opacity .5s ease, -moz-transform .5s ease, visibility .5s;
+    -webkit-transition: opacity .5s ease, -webkit-transform .5s ease, visibility .5s;
+    -ms-transition: opacity .5s ease, -ms-transform .5s ease, visibility .5s;
+    transition: opacity .5s ease, transform .5s ease, visibility .5s;
+    opacity: 0;
+    visibility: hidden
+}
+
+#intro.hidden+#header .logo {
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible
+}
+
+body.is-loading #intro {
+    -moz-transform: translateY(2rem);
+    -webkit-transform: translateY(2rem);
+    -ms-transform: translateY(2rem);
+    transform: translateY(2rem);
+    opacity: 0
+}
+
+body.is-loading #intro:not(.hidden)+#header+#nav {
+    -moz-transform: translateY(4rem);
+    -webkit-transform: translateY(4rem);
+    -ms-transform: translateY(4rem);
+    transform: translateY(4rem);
+    opacity: 0
+}
+
+@media screen and (max-width:980px) {
+    #intro {
+        padding: 4rem 4rem 2rem 4rem;
+        min-height: 90vh
+    }
+    #intro p br {
+        display: none
+    }
+    #intro+#header {
+        margin-top: -14rem
+    }
+}
+
+@media screen and (max-width:736px) {
+    #intro {
+        padding: 3rem 2rem 1rem 2rem;
+        min-height: 80vh
+    }
+    #intro h1 {
+        font-size: 3.25rem;
+        line-height: 1.1;
+        margin-bottom: 1rem
+    }
+    #intro p {
+        font-size: 1rem;
+        margin-top: 0
+    }
+    #intro .actions {
+        display: none
+    }
+}
+
+ul.actions {
+    cursor: default;
+    list-style: none;
+    padding-left: 0
+}
+
+ul.actions li {
+    display: inline-block;
+    padding: 0 1rem 0 0;
+    vertical-align: middle
+}
+
+ul.actions li:last-child {
+    padding-right: 0
+}
+
+ul.actions.small li {
+    padding: 0 .5rem 0 0
+}
+
+ul.actions.vertical li {
+    display: block;
+    padding: 1rem 0 0 0
+}
+
+ul.actions.vertical li:first-child {
+    padding-top: 0
+}
+
+ul.actions.vertical li>* {
+    margin-bottom: 0
+}
+
+ul.actions.vertical.small li {
+    padding: .5rem 0 0 0
+}
+
+ul.actions.vertical.small li:first-child {
+    padding-top: 0
+}
+
+ul.actions.fit {
+    display: table;
+    margin-left: -1rem;
+    padding: 0;
+    table-layout: fixed;
+    width: calc(100% + 1rem)
+}
+
+ul.actions.fit li {
+    display: table-cell;
+    padding: 0 0 0 1rem
+}
+
+ul.actions.fit li>* {
+    margin-bottom: 0
+}
+
+ul.actions.fit.small {
+    margin-left: -.5rem;
+    width: calc(100% + .5rem)
+}
+
+ul.actions.fit.small li {
+    padding: 0 0 0 .5rem
+}
+
+@media screen and (max-width:480px) {
+    ul.actions {
+        margin: 0 0 2rem 0
+    }
+    ul.actions li {
+        padding: 1rem 0 0 0;
+        display: block;
+        text-align: center;
+        width: 100%
+    }
+    ul.actions li:first-child {
+        padding-top: 0
+    }
+    ul.actions li>* {
+        width: 100%;
+        margin: 0!important
+    }
+    ul.actions li>.icon:before {
+        margin-left: -2rem
+    }
+    ul.actions.small li {
+        padding: .5rem 0 0 0
+    }
+    ul.actions.small li:first-child {
+        padding-top: 0
+    }
+}

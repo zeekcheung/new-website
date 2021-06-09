@@ -1,0 +1,22 @@
+@import url(same.css);
+.image.main {
+    display: block;
+    margin: 4rem 0;
+    width: 100%
+}
+
+.image.main:first-child {
+    margin-top: 0
+}
+
+.image.main img {
+    max-width: 100%
+}
+
+.post>h2 {
+    text-align: center;
+}
+
+.post>p {
+    text-indent: 2rem;
+}
