@@ -1,33 +1,54 @@
+<?php
+session_start();
+require 'php/conn.php';
+
+header("content-type:text/html,charset:gbk");
+mysqli_query($link, "set names gbk");
+
+// 图片路径
+$path = array(
+    "HTML" => "../images/article/HTML.svg",
+    "CSS" => "../images/article/CSS.svg",
+    "JAVASCRIPT" => "../images/article/JAVASCRIPT.svg",
+    "C" => "../images/article/C.svg",
+    "JAVA" => "../images/article/JAVA.svg",
+    "PYTHON" => "../images/article/PYTHON.svg",
+    "GIT" => "../images/article/GIT.svg",
+    "BROWSER" => "../images/article/BROWSER.svg",
+    "INTERNET" => "../images/article/INTERNET.svg"
+);
+
+$id = $_GET['ID'];
+$sql = "SELECT * FROM article WHERE id = $id";
+$result = mysqli_query($link, $sql);
+$row = mysqli_fetch_array($result);
+
+if ($row) {
+    $title = stripslashes($row['title']);
+    $content = stripslashes($row['content']);
+    $date = $row['date'];
+    $tag = $row['tag'];
+    $path = $path[$tag];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="gbk">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="clementCheung">
-    <meta name="description" content="This is a website designed by clement Cheung.">
-    <link rel="stylesheet" href="css/index.min.css">
-    <link rel="shortcut icon" href="Icons/home.svg">
-    <title>Clement Cheung</title>
+    <meta name="description" content="Articals written by Clement Cheung.">
+    <link rel="stylesheet" href="css/show.min.css">
+    <link rel="shortcut icon" href="Icons/article.svg">
+    <title>Articals</title>
 </head>
 
 <body class="is-loading">
     <!-- 页面内容的容器 -->
     <div id="wrapper" class="fade-in">
-        <!-- 简介 -->
-        <div id="intro">
-            <h1>This is <br>
-                Clement</h1>
-
-            <p>Carpe Diem</p>
-
-            <!-- 箭头 -->
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
-
         <!-- logo -->
         <header id="header">
             <a href="index.html" class="logo">Clement</a>
@@ -36,13 +57,13 @@
         <!-- 导航栏 -->
         <nav id="nav">
             <ul class="links">
-                <li class="active"><a href="index.html">ABOUT</a></li>
-                <li><a href="article.php">ARTICLE</a></li>
+                <li><a href="index.html">ABOUT</a></li>
+                <li><a href="article.html">ARTICLE</a></li>
                 <li><a href="Instagram.html">INSTAGRAM</a></li>
                 <li><a href="login.html">LOGIN</a></li>
             </ul>
             <ul class="icons">
-                <li><a target="_blank" href="https://github.com/clementchueng" class="icon fa-github"></a></li>
+                <li><a href="#" class="icon fa-github"></a></li>
                 <li><a href="#" class="icon fa-twitter"></a></li>
                 <li><a href="#" class="icon fa-facebook"></a></li>
             </ul>
@@ -50,19 +71,19 @@
 
         <!-- 主要内容 -->
         <main id="main">
-            <!-- 个人简介 -->
-            <article class="post featured">
+            <!-- 文章 -->
+            <section class="post">
                 <header class="major">
-                    <span class="date">May 29, 2021</span>
-                    <h2><a href="#">This is <br />
-                            Clement Cheung</a></h2>
-                    <p>A common people. <br>
-                        A common coder. <br>
-                        Like music. <br>
-                        Like movie.</p>
+                    <span class="date"><?php echo $date ?></span>
+
                 </header>
-                <a href="#" class="image main"><img src="images/instagram/people.jpg" alt="" /></a>
-            </article>
+
+                <h2>
+                    <title><?php echo $title ?></title>
+                </h2>
+                <div class="image main"><img src="<?php echo $path ?>" alt="<?php echo $tag ?>" style="margin:0 auto; width:70%" /></div>
+                <p><?php echo $content ?></p>
+            </section>
         </main>
 
         <!-- 页脚 -->
@@ -92,11 +113,11 @@
             <section class="split contact">
                 <section class="alt">
                     <h3>ADDRESS</h3>
-                    <p>广东省汕头市金平区汕头大学</p>
+                    <p><?php echo iconv("utf-8", "gbk", "广东省") ?></p>
                 </section>
                 <section>
                     <h3>PHONE</h3>
-                    <p>+86 137***9601</p>
+                    <p>+86 13727819601</p>
                 </section>
                 <section>
                     <h3>EMAIL</h3>
@@ -108,9 +129,7 @@
                         <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
                         <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
                         <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a target="_blank" href="https://github.com/clementchueng" class="icon alt fa-github"><span
-                                    class="label">GitHub</span></a>
-                        </li>
+                        <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
                     </ul>
                 </section>
             </section>
@@ -126,6 +145,7 @@
 
     <!-- js -->
     <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollex.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/skel.min.js"></script>

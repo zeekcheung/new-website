@@ -6,28 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="clementCheung">
-    <meta name="description" content="This is a website designed by clement Cheung.">
-    <link rel="stylesheet" href="css/index.min.css">
-    <link rel="shortcut icon" href="Icons/home.svg">
-    <title>Clement Cheung</title>
+    <meta name="description" content="Articals written by Clement Cheung.">
+    <link rel="stylesheet" href="css/instagram.css">
+    <link rel="shortcut icon" href="Icons/instagram.svg">
+    <title>Instagram</title>
 </head>
 
 <body class="is-loading">
     <!-- 页面内容的容器 -->
     <div id="wrapper" class="fade-in">
-        <!-- 简介 -->
-        <div id="intro">
-            <h1>This is <br>
-                Clement</h1>
-
-            <p>Carpe Diem</p>
-
-            <!-- 箭头 -->
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
-
         <!-- logo -->
         <header id="header">
             <a href="index.html" class="logo">Clement</a>
@@ -36,13 +23,13 @@
         <!-- 导航栏 -->
         <nav id="nav">
             <ul class="links">
-                <li class="active"><a href="index.html">ABOUT</a></li>
+                <li><a href="index.html">ABOUT</a></li>
                 <li><a href="article.php">ARTICLE</a></li>
-                <li><a href="Instagram.html">INSTAGRAM</a></li>
+                <li class="active"><a href="Instagram.html">INSTAGRAM</a></li>
                 <li><a href="login.html">LOGIN</a></li>
             </ul>
             <ul class="icons">
-                <li><a target="_blank" href="https://github.com/clementchueng" class="icon fa-github"></a></li>
+                <li><a href="#" class="icon fa-github"></a></li>
                 <li><a href="#" class="icon fa-twitter"></a></li>
                 <li><a href="#" class="icon fa-facebook"></a></li>
             </ul>
@@ -50,19 +37,85 @@
 
         <!-- 主要内容 -->
         <main id="main">
-            <!-- 个人简介 -->
-            <article class="post featured">
-                <header class="major">
-                    <span class="date">May 29, 2021</span>
-                    <h2><a href="#">This is <br />
-                            Clement Cheung</a></h2>
-                    <p>A common people. <br>
-                        A common coder. <br>
-                        Like music. <br>
-                        Like movie.</p>
-                </header>
-                <a href="#" class="image main"><img src="images/instagram/people.jpg" alt="" /></a>
-            </article>
+            <!-- 图片 -->
+            <section class="post">
+                <span class="image fit"><img src="images/article2/pic01.jpg" alt="" /></span>
+
+                <div class="container">
+                    <div class="box">
+                        <img src="images/instagram/beer.jpg" />
+
+                        <div class="caption">
+                            <h3>beer</h3>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/instagram/cat-1.jpg" />
+
+                        <div class="caption">
+                            <h3>Cat-1</h3>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/instagram/small.jpg" />
+
+                        <div class="caption">
+                            <h3>Small</h3>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/instagram/dog.jpg" />
+
+                        <div class="caption">
+                            <h3>Dog</h3>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/instagram/girl.jpg" />
+
+                        <div class="caption">
+                            <h3>Girl</h3>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/instagram/oats.jpg" />
+
+                        <div class="caption">
+                            <h3>Oats</h3>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/instagram/people.jpg" />
+
+                        <div class="caption">
+                            <h3>People</h3>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/instagram/portrait.jpg" />
+
+                        <div class="caption">
+                            <h3>Portrait</h3>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/instagram/sunbeam.jpg" />
+
+                        <div class="caption">
+                            <h3>Sunbeam</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </main>
 
         <!-- 页脚 -->
@@ -129,8 +182,9 @@
     <script src="js/jquery.scrollex.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/skel.min.js"></script>
-    <script src="js/util.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/caption.js"></script>
 </body>
 
 </html>
